@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+    <script>
+      let data = [4, 6, 7, 9, 12, 24, 35];
+      console.log(data);
+      let position = 3;
+      for (let i = position; i < data.length; i++) {
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1;
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>

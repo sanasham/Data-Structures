@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge</title>
+    <script>
+      let data1 = [1, 3, 5, 8, 5];
+      let data2 = [10, 30, 15, 28, 50];
+      let data3 = [];
+      let data4 = [];
+      for (let i = 0; i < data1.length; i++) {
+        data3[i] = data1[i];
+      }
+      console.log('length', data3.length);
+      for (let i = 0; i < data2.length; i++) {
+        data3[data3.length] = data2[i];
+      }
+      console.log(data3);
+      console.log('data4: ', [...data1, ...data2]);
+      console.log(data3.reverse());
+    </script>
+  </head>
+  <body></body>
+</html>
