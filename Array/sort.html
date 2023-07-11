@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort</title>
+    <script>
+      let data = [50, 30, 2, 15, 28, 5];
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+          let temp = 0;
+
+          if (data[j] > data[j + 1]) {
+            console.log('inside condition');
+            console.log(data[j]);
+            console.log(data[j + 1]);
+            temp = data[j];
+            console.log('temp', temp);
+            data[j] = data[j + 1];
+            console.log('data[i]', data[i]);
+            data[j + 1] = temp;
+            console.log(data[j + 1]);
+          }
+        }
+      }
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
