@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [3, 5, 12, 67, 45];
+      let find = 67;
+      let positions;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i] == find) {
+          positions = i;
+          break;
+        }
+      }
+      console.log(positions + 'value is ' + data[positions]);
+    </script>
+  </head>
+  <body></body>
+</html>

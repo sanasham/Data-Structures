@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse String</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      function push(item) {
+        data[currentSize] = item;
+        currentSize++;
+      }
+      function pop(item) {
+        currentSize -= 1;
+        data.length = currentSize;
+      }
+
+      let str = 'welcome';
+      //   push(20);
+      //   push(30);
+      //   push(40);
+      //   push(50);
+      //   push(60);
+      console.log(data);
+      //pop();
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
