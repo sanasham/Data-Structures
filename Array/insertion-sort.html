@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion-Sort</title>
+    <script>
+      let data = [3, 54, 62, 23, 1, 58, 85, 7, 4];
+
+      function InsertionSort(arr) {
+        console.log('start', data);
+        let current, previous;
+        for (let i = 1; i < data.length; i++) {
+          current = arr[i];
+          previous = i - 1;
+          while (previous >= 0 && arr[previous] > current) {
+            arr[previous + 1] = arr[previous];
+            previous = previous - 1;
+
+            // arr[i] = arr[previous];
+            // arr[previous] = current;
+            // previous = previous - 1;
+            // console.log('previous');
+          }
+          data[previous + 1] = current;
+          console.log(i);
+        }
+      }
+      InsertionSort(data);
+      console.log('end', data);
+    </script>
+  </head>
+  <body></body>
+</html>

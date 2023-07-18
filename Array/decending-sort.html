@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [5, 80, 3, 56, 78, 63, 23, 41];
+      function decendingOrder(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          let temp;
+          let mid = i;
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[mid]) {
+              mid = j;
+            }
+            temp = arr[mid];
+            arr[mid] = arr[i];
+            arr[i] = temp;
+          }
+        }
+      }
+
+      decendingOrder(data);
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
