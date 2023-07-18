@@ -6,13 +6,27 @@
     <title>Binary-Search</title>
     <script>
       let data = [1, 4, 7, 9, 12, 14, 16, 28];
-      const start = 0;
-      const end = data.length - 1;
+      let start = 0;
+      let find = 28;
+      let end = data.length - 1;
       let position;
       let mid;
+
       while (start <= end) {
+        // console.log('inside loop');
         mid = Math.floor((start + end) / 2);
+        // console.log('mid = ' + mid);
+        if (data[mid] === find) {
+          position = mid;
+          break;
+        } else if (data[mid] < find) {
+          start = mid + 1;
+        } else {
+          end = mid - 1;
+        }
       }
+      console.log('position = ' + position);
+      console.log(data[position]);
     </script>
   </head>
   <body></body>

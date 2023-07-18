@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const data = [2, 4, 7, 9, 23, 45, 56, 76, 80];
+      let start = 0;
+      let end = data.length - 1;
+      let position;
+      const find = 2;
+      let mid;
+      function recursiveSearchBinary(data, start, end) {
+        if (start > end) {
+          console.log('value not found');
+          return false;
+        } else {
+          mid = Math.floor((start + end) / 2);
+          console.log(mid);
+          if (data[mid] === find) {
+            position = mid;
+            return true;
+          } else if (data[mid] < find) {
+            recursiveSearchBinary(data, mid + 1, end);
+          } else {
+            recursiveSearchBinary(data, start, mid - 1);
+          }
+        }
+      }
+      recursiveSearchBinary(data, start, end);
+      console.log('position', position);
+      console.log('position value', data[position]);
+    </script>
+  </head>
+  <body></body>
+</html>
