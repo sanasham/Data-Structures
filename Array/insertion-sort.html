@@ -16,11 +16,6 @@
           while (previous >= 0 && arr[previous] > current) {
             arr[previous + 1] = arr[previous];
             previous = previous - 1;
-
-            // arr[i] = arr[previous];
-            // arr[previous] = current;
-            // previous = previous - 1;
-            // console.log('previous');
           }
           data[previous + 1] = current;
           console.log(i);
