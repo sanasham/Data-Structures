@@ -6,12 +6,26 @@
     <title>Anagram</title>
     <script>
       function checkAnagram(str1, str2) {
+        let objStr1 = {};
         if (str1.length !== str2.length) {
+          console.log('this is not a anagram');
           return false;
         }
-        console.log(str1, str2);
+        for (ch of str1) {
+          console.log(ch);
+          objStr1[ch] = (objStr1[ch] || 0) + 1;
+        }
+        for (ch of str2) {
+          if (!objStr1[ch]) {
+            return false;
+          }
+          //objStr1[ch]--;
+          console.log(objStr1[ch]);
+        }
+        console.log(objStr1);
+        console.log('this is a anagram');
       }
-      checkAnagram('hello', 'hello');
+      console.log(checkAnagram('elloh', 'hello'));
     </script>
   </head>
   <body></body>
