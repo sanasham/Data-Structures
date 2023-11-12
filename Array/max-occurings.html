@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = 'sayyed esub vali';
+      let objStr1 = {};
+      // 1 method
+      //   for (let ch of data) {
+      //     objStr1[ch] = (objStr1[ch] || 0) + 1;
+      //   }
+
+      // 2 method
+      for (let i = 0; i < data.length - 1; i++) {
+        let key = data[i];
+        if (data[key] != ' ') {
+          objStr1[key] = (objStr1[key] || 0) + 1;
+        }
+      }
+      console.log(objStr1);
+    </script>
+  </head>
+  <body></body>
+</html>
