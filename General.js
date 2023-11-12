@@ -31,11 +31,25 @@
 
 // Reverse string
 
-function isReverse(string3) {
-  let str = "";
-  for (let i = string3.length - 1; i >= 0; i--) {
-    str = str.concat(string3[i]);
+// function isReverse(string3) {
+//   let str = "";
+//   for (let i = string3.length - 1; i >= 0; i--) {
+//     str = str.concat(string3[i]);
+//   }
+//   return str;
+// }
+// console.log(isReverse("Diya"));
+
+//brute force solution
+const twoSum = function (num, target) {
+  let result = [];
+  for (let i = 0; i < num.length - 1; i++) {
+    for (let j = i + 1; j < num.length; j++) {
+      if (num[i] + num[j] === target) {
+        result.push([num.indexOf(num[i]), num.indexOf(num[j])]);
+      }
+    }
   }
-  return str;
-}
-console.log(isReverse("Diya"));
+  return result;
+};
+console.log(twoSum([2, 7, 4, 11, 5, 15], 9));
