@@ -58,3 +58,24 @@ if (areAnagram(str1, str2)) {
 } else {
   console.log(`${str1} and ${str2} are not anagrams.`);
 }
+
+//Palindrome Check
+
+function isPalindrome(str1) {
+  let clearString1 = str1.replace(/ /g, "").toLowerCase();
+  const customLength = clearString1.length;
+  for (let i = 0; i < customLength / 2; i++) {
+    if (clearString1[i] !== clearString1[customLength - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const palindromeString = "civic";
+
+if (isPalindrome(palindromeString)) {
+  console.log(`"${palindromeString}" is a palindrome.`);
+} else {
+  console.log(`"${palindromeString}" is not a palindrome.`);
+}
