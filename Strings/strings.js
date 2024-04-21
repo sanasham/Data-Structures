@@ -79,3 +79,28 @@ if (isPalindrome(palindromeString)) {
 } else {
   console.log(`"${palindromeString}" is not a palindrome.`);
 }
+
+//Longest Substring Without Repeating Characters
+
+function longestSubstring(str) {
+  const charIndexMap = {};
+  let maxLength = 0;
+  let startIndex = 0;
+  for (let endIndex = 0; endIndex < str.length; endIndex++) {
+    const currentChar = str[endIndex];
+    if (
+      charIndexMap[currentChar] !== undefined &&
+      charIndexMap[currentChar] >= startIndex
+    ) {
+      startIndex = charIndexMap[currentChar] + 1;
+    }
+    charIndexMap[currentChar] = endIndex;
+    maxLength = Math.max(maxLength, endIndex - startIndex + 1);
+  }
+  console.log(charIndexMap);
+  return maxLength;
+}
+
+const inputString = "abcabcbb";
+const result = longestSubstring(inputString);
+console.log(result);
